@@ -3,7 +3,7 @@
 	<shell>
     	
     <menu name="DeluxeEdit with DeluxeEdit..." description="Run DeluxeEdit with DeluxeEdit"  >
-      <icon path="C:\gitroot\DeluxeEdit\DeluxeEdit\bin\Release\net9.0-windows10.0.17763.0\DeluxeEdit.exe"  />
+      <icon path="C:\gitroot\DeluxeEdit\DeluxeEdit\bin\Production\Publish\DeluxeEdit.exe"  />
 		<visibility maxfiles="1" maxfolders="0" istrue="true"	properties="system.true=se" 	 />
 		<actions>
 		  <exec path="C:\gitroot\DeluxeEdit\DeluxeEdit\bin\Production\Publish\DeluxeEdit.exe" arguments="${selection.path}" />

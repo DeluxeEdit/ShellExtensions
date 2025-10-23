@@ -1,4 +1,0 @@
-﻿  Building Custom Rule C:/gitroot/ShellAnything/src/plugins/sa_plugin_demo/CMakeLists.txt
-  sa_plugin_demo.cpp
-     Creating library C:/gitroot/ShellAnything/src/plugins/sa_plugin_demo/build/Debug/sa_plugin_demo-d.lib and object C:/gitroot/ShellAnything/src/plugins/sa_plugin_demo/build/Debug/sa_plugin_demo-d.exp
-  sa_plugin_demo.vcxproj -> C:\gitroot\ShellAnything\src\plugins\sa_plugin_demo\build\Debug\sa_plugin_demo-d.dll

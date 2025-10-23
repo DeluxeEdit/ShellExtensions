@@ -1,7 +1,0 @@
-# This file contains a list of people who've made contribution to 
-# the project.  People who commit code are encouraged to add 
-# their names here.  Please keep the list sorted by first names.
-
-Antoine Beauchamp, https://github.com/end2endzone, end2endzone@gmail.com
-Cirn09, https://github.com/Cirn09
-Mindaugas Ribaconka, https://github.com/GasDauMin, GasDauMin@gmail.com

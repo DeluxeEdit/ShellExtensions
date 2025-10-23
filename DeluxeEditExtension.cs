@@ -1,4 +1,5 @@
-﻿using SharpShell.SharpContextMenu;
+﻿
+using SharpShell.SharpContextMenu;
 using System;
 using System.Collections.Generic;
 using System.Linq;

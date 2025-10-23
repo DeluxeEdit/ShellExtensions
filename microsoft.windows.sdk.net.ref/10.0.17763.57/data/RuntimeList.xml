@@ -1,0 +1,5 @@
+<FileList Name="Windows SDK .NET 8.0" TargetFrameworkIdentifier=".NETCoreApp" TargetFrameworkVersion="8.0" FrameworkName="Microsoft.Windows.SDK.NET.Ref">
+  <File Type="Managed" Path="lib/net8.0/Microsoft.Windows.SDK.NET.dll" PublicKeyToken="31bf3856ad364e35" AssemblyName="Microsoft.Windows.SDK.NET" AssemblyVersion="10.0.17763.38" FileVersion="10.0.17763.55" Profile="Windows" />
+  <File Type="Managed" Path="lib/net8.0/WinRT.Runtime.dll" PublicKeyToken="99ea127f02d97709" AssemblyName="WinRT.Runtime" AssemblyVersion="2.2.0.0" FileVersion="2.2.0.48161" Profile="Windows" />
+  <File Type="Managed" Path="lib/net8.0/Microsoft.Windows.UI.Xaml.dll" PublicKeyToken="31bf3856ad364e35" AssemblyName="Microsoft.Windows.UI.Xaml" AssemblyVersion="10.0.17763.52" FileVersion="10.0.17763.55" Profile="Xaml" />
+</FileList>

@@ -1,10 +1,30 @@
+try
+{
+ git -v
+}
+catch 
+{ 
+	winget install Git.Git
+}
+try
+{
+ dotnet   --version
+}
+catch 
+{ 
+ winget install Microsoft.DotNet.SDK.9
+}
+ 
 
-$found =Test-Path "$env:USERPROFILE\ShellAnything"
+ git clone  https://github.com/DeluxeEdit/ShellExtensions.git
+ dotnet build
+ $destDir= "$env:USERPROFILE\DeluxeShellExtensaions"
+$found =Test-Path $destDir
 if ($found=false) 
 {
-	md "$env:USERPROFILE\ShellAnything"
+	md $destDir
 }
-cd "$env:USERPROFILE\ShellAnything"
-regsvr32 sadeluxeeditextension.dll
+cd $destDir
+
 
 

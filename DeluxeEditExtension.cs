@@ -1,8 +1,10 @@
 ﻿
+using SharpShell.Attributes;
 using SharpShell.SharpContextMenu;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -11,6 +13,8 @@ namespace ShellExtensions
     /// <summary>
     /// The Count Lines Context Menu Extension
     /// </summary>
+    [ComVisible(true)]
+    [COMServerAssociation(AssociationType.AllFiles)]
     public class DeluxeEditExtension : SharpContextMenu
     {
         const string CommandToRun = "PyDeluxeEdit";

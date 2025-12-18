@@ -2,6 +2,7 @@
 using SharpShell.SharpContextMenu;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
@@ -16,7 +17,9 @@ namespace ShellExtensions
     [COMServerAssociation(AssociationType.AllFiles)]
     public class DeluxeHexViewExtension : SharpContextMenu
     {
-        const string CommandToRun = "PyDeluxeEdit --hex";
+        const string ExeToRun = "DeluxeEdit.exe";
+
+        const string suffixToRun = " --hex";
         protected override bool CanShowMenu()
         {
             //  We will always show the menu
@@ -27,14 +30,14 @@ namespace ShellExtensions
         {
             //  Create the menu strip
             var menu = new ContextMenuStrip();
-            
+
             var deluxeItem = new ToolStripMenuItem();
             deluxeItem.Text = "DeluxeHexView...";
             deluxeItem.Image = Properties.Resources.deluxe;
 
 
             //  When we click, we'll call the 'CountLines' function
-            deluxeItem.Click += (sender, args) => starProlgram();
+            deluxeItem.Click += (sender, args) => startProgram();
 
             //  Add the item to the context menu
             menu.Items.Add(deluxeItem);
@@ -43,16 +46,19 @@ namespace ShellExtensions
             return menu;
         }
 
-        private void starProlgram()
+
+        private void startProgram()
         {
             var selectedPath = SelectedItemPaths.FirstOrDefault();
             if (selectedPath != null)
-            { 
+            {
+                var process = new Process();
+                process.StartInfo = new ProcessStartInfo(ExeToRun, selectedPath + suffixToRun);
+                process.Start();
+
             }
-            //  Go through each fileS
-                //  Count the lines
+
         }
 
     }
-
-}
+   }

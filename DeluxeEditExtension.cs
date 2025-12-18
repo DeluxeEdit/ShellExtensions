@@ -3,6 +3,7 @@ using SharpShell.Attributes;
 using SharpShell.SharpContextMenu;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
@@ -17,7 +18,7 @@ namespace ShellExtensions
     [COMServerAssociation(AssociationType.AllFiles)]
     public class DeluxeEditExtension : SharpContextMenu
     {
-        const string CommandToRun = "PyDeluxeEdit";
+        const string ExeToRun = "DeluxeEdit.exe";
 
         protected override bool CanShowMenu()
         {
@@ -49,7 +50,12 @@ namespace ShellExtensions
             var selectedPath = SelectedItemPaths.FirstOrDefault();
             if (selectedPath != null)
             {
-            }
+                var process=new Process();
+                process.StartInfo = new ProcessStartInfo(ExeToRun, selectedPath);
+                process.Start();
+
+          }
+
             //  Go through each fileS
             //  Count the lines
         }
